@@ -2,6 +2,8 @@
 functions = "./functions"
 
 [[redirects]]
+  # Any routes we don't have a static page for, use a server-side-render function
+  # The 200 status means it leaves the browser URL in place, it doesn't behave as a browser redirect.
   from = "/*"
-  to = "/.netlify/functions/test"
+  to = "/.netlify/functions/server-side-render"
   status = 200

@@ -1,4 +1,5 @@
-<html>
+const printHtml = message => {
+  return `<html>
   <head>
     <title>Example of server-side rendering in Netlify</title>
     <meta name="generator" value="Hand-crafted HTML" />
@@ -7,8 +8,10 @@
     <article>
       <h1>An example of server-side rendering in Netlify</h1>
       <p>
-        This page is static HTML, served directly from Netlify's
-        <abbr title="Content Distribution Network">CDN</abbr>
+        This page is HTML produced with server-side-rendering, served using Netlify Functions
+      </p>
+      <p>
+        ${message}
       </p>
     </article>
     <nav>
@@ -34,4 +37,12 @@
       </ul>
     </nav>
   </body>
-</html>
+</html>`;
+};
+
+exports.handler = (event, context, callback) => {
+  callback(null, {
+    statusCode: 200,
+    body: printHtml(`This was a ${event.method} HTTP request to ${event.path}`)
+  });
+};
