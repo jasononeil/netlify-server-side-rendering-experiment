@@ -1,14 +1,18 @@
 <html>
   <head>
     <title>Example of server-side rendering in Netlify</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"></link>
+    <link rel="stylesheet" href="/style.css"></link>
     <meta name="generator" value="Hand-crafted HTML" />
   </head>
   <body>
-    <article>
+    <header>
       <h1>An example of server-side rendering in Netlify</h1>
+    </header>
+    <article>
       <p>
         This page is static HTML, served directly from Netlify's
-        <abbr title="Content Distribution Network">CDN</abbr>
+        <abbr title="Content Distribution Network">CDN</abbr>.
       </p>
     </article>
     <nav>
@@ -22,6 +26,16 @@
         <li>
           <a href="/page/that/renders/server/side">
             Another server-side rendered HTML page
+          </a>
+        </li>
+        <li>
+          <a href="/status">
+            A "Not Found 404" page
+          </a>
+        </li>
+        <li>
+          <a href="/redirect">
+            A HTTP 302 Redirect
           </a>
         </li>
         <li>
