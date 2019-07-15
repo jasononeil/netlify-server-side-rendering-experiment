@@ -17,6 +17,7 @@ exports.handler = (event, context, callback) => {
       });
       break;
     default:
+      // Demonstrate normal server-side rendering
       callback(null, {
         statusCode: 200,
         body: printHtml(
