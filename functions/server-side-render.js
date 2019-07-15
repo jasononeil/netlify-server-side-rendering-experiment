@@ -34,6 +34,7 @@ function printHtml(message) {
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"></link>
     <link rel="stylesheet" href="/style.css"></link>
     <meta name="generator" value="Server-Rendered HTML!" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
     <header>
