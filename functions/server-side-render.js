@@ -41,6 +41,24 @@ const printHtml = message => {
 };
 
 exports.handler = (event, context, callback) => {
+  // Demonstrate setting a custom status, despite the redirect file specifying "200"
+  if (event.path === "/status") {
+    callback(null, {
+      statusCode: 404,
+      body: printHtml(`This event is returning a custom 404 Not Found status`)
+    });
+    return;
+  }
+  // Demonstrate setting a redirect, despite the function being called from a rediriect.
+  if (event.path === "/redirect") {
+    callback(null, {
+      statusCode: 302,
+      headers: {
+        location: 'https://html5zombo.com/'
+      }
+    });
+    return;
+  }
   callback(null, {
     statusCode: 200,
     body: printHtml(`This was a ${event.httpMethod} HTTP request to ${event.path}`)
