@@ -43,6 +43,7 @@ function printHtml(message) {
       <p>
         ${message}
       </p>
+      <p><a href="https://github.com/jasononeil/netlify-server-side-rendering-experiment">What is this? (and how? and why?)</a></p>
     </article>
     <nav>
       <ul>

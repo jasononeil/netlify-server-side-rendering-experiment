@@ -78,4 +78,9 @@ nav form {
 article {
     font-size: 3rem;
     font-weight: 200;
+    text-align: center;
+}
+
+article a {
+    color: var(--color-font);
 }
